@@ -12,7 +12,7 @@ module.exports = {
           light: '#525252',
           stroke: '#333333',
         },
-        indigo: {
+        'violet': {
           DEFAULT: '#4E44CE'
         }
       },
