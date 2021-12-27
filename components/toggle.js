@@ -1,7 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { Context } from '../state'
 import { Switch } from '@headlessui/react'
+import generated from '../util/generate'
 
 
 function classNames(...classes) {
@@ -13,11 +14,19 @@ export default function Toggle({ label, target, isDefault }) {
 
   const enabled = state.options[target]
 
+  const handleRegen = () => {
+    const previousState = state
+    const newState = previousState
+    newState.phrase = generated(state.options)
+    setState({ ...newState })
+  }
+
   const handleToggle = (e) => {
     const previous = state
     const newObj = {...previous}
     newObj.options[target] = e
     setState(newObj)
+    handleRegen()
   }
 
   return (

@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-
-const initialState = {
-  phrase: 'drunk_tense_duck_bares_cupboard',
-  options: {
-    predicate: true,
-    adverb: true,
-    cap_first: false,
-    number: false,
-  }
+import generated from '../util/generate'
+const options = {
+  predicate: true,
+  adverb: true,
+  cap_first: false,
+  number: false,
+  punctuation: false,
 }
+
+const initialState = () => ({
+  phrase: generated(options),
+  options,
+})
 
 export const Context = React.createContext()
 
