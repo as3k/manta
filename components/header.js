@@ -4,11 +4,10 @@ const Header = ({ className }) => {
   return (
     <div className={`header w-full px-4 flex items-center ${className}`}>
       <div className="left-icon">
-        <MenuIcon className="w-6 h-6 text-gray-light" />
+        {/* <MenuIcon className="w-6 h-6 text-gray-light" /> */}
       </div>
       <div className="center-logo flex justify-center flex-1">
-        <span className='text-white opacity-50'>Mako</span>
-        <span className='font-bold text-white'>PASS</span>
+        <span className='font-bold text-white'>MANTA</span>
       </div>
       <div className="right-area h-6 w-6"></div>
     </div>

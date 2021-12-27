@@ -26,7 +26,7 @@ const InputField = (props) => {
         onCopy={handleCopied}
       >
         <div className="flex justify-end items-center font-sans space-x-2">
-          <span className={classNames(copied.copied ? 'opacity-60 translate-y-0' : 'opacity-0 translate-y-2','text-sm', 'transition duration-200')}>
+          <span className={classNames(copied.copied ? 'opacity-60 translate-y-0' : 'opacity-0 translate-y-2', 'text-xs text-green-200 transition duration-200')}>
             Copied to clipboard
           </span>
           <div className="copy-wrapper p-1 border border-gray-stroke self-end rounded bg-white bg-opacity-5 hover:bg-opacity-10 transition duration-200 cursor-pointer">
