@@ -4,7 +4,7 @@ import Store from '../state'
 function MyApp({ Component, pageProps }) {
   return (
     <Store>
-      <Component {...pageProps} />)
+      <Component {...pageProps} />
     </Store>
   )
 }
