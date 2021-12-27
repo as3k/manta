@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Context } from '../state'
 import { DuplicateIcon } from '@heroicons/react/outline'
 import Header from '../components/header'
@@ -6,13 +6,13 @@ import Toggle from '../components/toggle'
 
 export default function Home() {
   const [state, setState] = useContext(Context)
+
   return (
     <div className="ext-container">
       <Header className="py-4 border-b-gray-stroke border-b bg-gray-dark" />
       <main className="extension-body px-4 mt-4">
-        <span>{ JSON.stringify(state.options) }</span>
         <div className="text-field border border-gray-stroke bg-gray-dark rounded p-4 text-white">
-          drunk_tense_duck_bares_cupboard
+          { state.phrase }
         </div>
         <div className="tooltip mt-2 text-white opacity-30 text-xs flex justify-end items-center ">
           <DuplicateIcon className='w-4 h-4 text-current' />

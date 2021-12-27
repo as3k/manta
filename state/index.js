@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const initialState = {
-  phrase: '',
+  phrase: 'drunk_tense_duck_bares_cupboard',
   options: {
     predicate: true,
     adverb: true,
