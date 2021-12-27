@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Manta: Passpharase Generator",
-  "short_name": "manta-pass",
+  "short_name": "manta",
   "version": "1.0.0",
   "description": "Random secure passphrase generator",
   "icons": {
@@ -10,8 +10,8 @@
       "150": "icons/150.png"
   },
   "permissions": [],
-  "browser_action": {
-      "default_title": "MantaPass",
+  "action": {
+      "default_title": "MANTA",
       "default_popup": "index.html"
   }
 }
