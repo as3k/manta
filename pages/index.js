@@ -4,6 +4,7 @@ import Header from '../components/header'
 import Toggle from '../components/toggle'
 import generated from '../util/generate'
 import InputField from '../components/inputField'
+import packageJson from '/package.json'
 
 export default function Home() {
   const [state, setState] = useContext(Context)
@@ -24,9 +25,14 @@ export default function Home() {
     { target: 'punctuation', label: "Include Punctuation", isDefault: false },
   ]
 
+  const iconList = ['🦑', '🦈', '🦐', '🐡', '🐳', '🦀']
+  const randomAnimal = () => {
+    return iconList[Math.floor(Math.random()*iconList.length)]
+  }
+
   return (
     <div className="ext-container">
-      <Header className="py-4 border-b-gray-stroke border-b bg-gray-dark" />
+      <Header className=" border-b-gray-stroke border-b bg-gray-dark" />
       <main className="extension-body px-4 mt-4">
         
         <InputField />
@@ -41,13 +47,17 @@ export default function Home() {
 
         <div className="button-container mt-10">
           <button 
-            className="bg-violet text-white text-center py-4 font-bold rounded w-full"
+            className="bg-gradient-to-tr from-indigo-900 to-violet text-white text-center py-4 font-bold rounded w-full"
             onClick={handleRegen}
           >
             Regenrate Passphrase
           </button>
         </div>
       </main>
+      <footer className="px-4 flex justify-between py-2">
+        <span className="text-xs text-white">Made with {randomAnimal()} in California</span>
+        <span className="text-xs text-white opacity-20">Version { packageJson.version }</span>
+      </footer>
     </div>
   )
 }

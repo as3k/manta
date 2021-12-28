@@ -1,6 +1,7 @@
 {
-  "name": "aardpass",
+  "name": "manta",
   "private": true,
+  "version": "1.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "rm -rf out && next build && next export && yarn prepare",

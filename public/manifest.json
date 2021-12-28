@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Manta: Passpharase Generator",
   "short_name": "manta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Random secure passphrase generator",
   "icons": {
       "16": "icons/16.png",

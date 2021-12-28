@@ -34,15 +34,15 @@ export default function Toggle({ label, target, isDefault }) {
       <Switch
         checked={enabled}
         onChange={handleToggle}
-        className={classNames('bg-gray-dark border-2 border-gray-stroke',
+        className={classNames('bg-gray-dark  border-gray-dark',
           'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200'
         )}
       >
         <span
           aria-hidden="true"
           className={classNames(
-            enabled ? 'translate-x-5 bg-indigo' : 'translate-x-0 bg-gray-light',
-            'pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200'
+            enabled ? 'translate-x-5 bg-gradient-to-tr from-cyan-900 to-cyan-500 border border-cyan-500' : 'translate-x-0 bg-gradient-to-tr from-gray-dark to-gray-light border border-gray-stroke',
+            'pointer-events-none inline-block h-5 w-5 rounded-full shadow transform ring-0 transition ease-in-out duration-200'
           )}
         />
       </Switch>
