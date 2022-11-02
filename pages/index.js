@@ -34,25 +34,32 @@ export default function Home() {
     <div className="ext-container">
       <Header className=" border-b-gray-stroke border-b bg-gray-dark" />
       <main className="extension-body px-4 mt-4">
-        
-        <InputField />
-        
-        <div className="options flex flex-col space-y-4 mt-6">
-          {ToggleList.map((item, i) => (
-            <div className="toggle-container" key={i}>  
-              <Toggle label={item.label} target={item.target} isDefault={item.isDefault} onClick={handleRegen} />
-            </div>
-          ))}
-        </div>
 
-        <div className="button-container mt-10">
-          <button 
-            className="bg-gradient-to-tr from-indigo-900 to-violet text-white text-center py-4 font-bold rounded w-full"
-            onClick={handleRegen}
-          >
-            Regenrate Passphrase
-          </button>
-        </div>
+        <section id="main" className="hidden">
+          <InputField />
+          
+          <div className="options flex flex-col space-y-4 mt-6">
+            {ToggleList.map((item, i) => (
+              <div className="toggle-container" key={i}>  
+                <Toggle label={item.label} target={item.target} isDefault={item.isDefault} onClick={handleRegen} />
+              </div>
+            ))}
+          </div>
+
+          <div className="button-container mt-10">
+            <button 
+              className="bg-gradient-to-tr from-indigo-900 to-violet text-white text-center py-4 font-bold rounded w-full"
+              onClick={handleRegen}
+            >
+              Regenrate Passphrase
+            </button>
+          </div>
+        </section>
+
+        <section id="history" className="text-gray-400">
+          <span>testy testy 123</span>
+        </section>
+
       </main>
       <footer className="px-4 flex justify-between py-2">
         <span className="text-xs text-white">Made with {randomAnimal()} in California</span>

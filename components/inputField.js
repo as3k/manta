@@ -19,6 +19,7 @@ const InputField = (props) => {
   }
 
   return (
+    <>
     <div className="w-full font-mono text-field border border-gray-stroke bg-gray-dark rounded p-4 text-white break-words flex flex-col">
       <span className="opacity-80 block">{state.phrase}</span>
       <CopyToClipboard
@@ -36,6 +37,8 @@ const InputField = (props) => {
         </div>
       </CopyToClipboard>
     </div>
+    <span className="text-gray-400 text-sm">{state.phrase.length} characters</span>
+    </>
 
   );
 }

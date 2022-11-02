@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MenuAlt1Icon, MenuAlt1Icon as MenuIcon } from '@heroicons/react/outline'
+import { MenuAlt1Icon, ClockIcon } from '@heroicons/react/outline'
 import MantaIcon from './mantaIcon'
 import NavSlideover from './slideover'
 
@@ -16,6 +16,9 @@ const Header = ({ className }) => {
         <div className="flex items-center -mt-1 ml-2 text-white ">
         <span className='font-bold text-xl'>MANTA</span>
         </div>
+      </div>
+      <div className="h-6 w-6 mr-2">
+        <ClockIcon className="w-full text-white" />
       </div>
       <div className="h-6 w-6 mr-2" onClick={handleOpen}>
         <MenuAlt1Icon className='w-full text-white' />
